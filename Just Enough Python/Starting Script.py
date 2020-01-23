@@ -2,13 +2,25 @@ import telnetlib
 import paramiko
 import time
 import requests
+from netmiko import Netmiko
 
 host_list= ["10.0.0.1", "10.0.0.2", "10.0.0.3", "10.0.0.4"]
 #host_list= ["10.0.0.1"]
 username = 'chad'
 password = 'p@ssw@rd'
 
+
 for individual_host in host_list:
+    try:
+        cisco1 = {"host": individual_host, "username": username, "password": password, "device_type": "cisco_ios"}
+        netmiko_command = "show ip int brief"
+        net_connect = Netmiko(**cisco1)
+        output = net_connect.send_command(netmiko_command)
+        net_connect.disconnect()
+        print(output)
+    except:
+        print("Do Nothing")
+
     try:
         ssh_client = paramiko.SSHClient()
         ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
