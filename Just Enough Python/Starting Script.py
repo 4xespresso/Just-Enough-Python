@@ -5,7 +5,6 @@ import requests
 from netmiko import Netmiko
 
 host_list= ["10.0.0.1", "10.0.0.2", "10.0.0.3", "10.0.0.4"]
-#host_list= ["10.0.0.1"]
 username = 'chad'
 password = 'p@ssw@rd'
 
