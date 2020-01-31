@@ -5,8 +5,8 @@ import requests
 from netmiko import Netmiko
 
 host_list= ["10.128.0.26", "10.128.0.27", "10.128.0.28"]
-username = 'chad'
-password = 'p@ssw@rd'
+username = "python-user"
+password = ''
 
 
 for individual_host in host_list:
