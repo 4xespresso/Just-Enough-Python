@@ -1,0 +1,84 @@
+---
+- name: Configure Routers
+  connection: network_cli
+  hosts: all
+  gather_facts: false
+  vars:
+    ansible_network_os: ios
+    ansible_user: chad
+    users:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+      - 19
+      - 20
+      - 21
+      - 22
+      - 23
+      - 24
+      - 25
+      - 26
+      - 27
+      - 28
+      - 29
+      - 30
+      - 31
+      - 32
+      - 33
+      - 34
+      - 35
+      - 36
+      - 37
+      - 38
+      - 39
+      - 40
+      - 41
+      - 42
+      - 43
+      - 44
+      - 45
+      - 46
+      - 47
+      - 48
+      - 49
+      - 50
+  tasks:
+    - name: Push python-users to routers
+      ios_config:
+        lines:
+          - username python-user privilege 15 password 0 InsightInsight
+          - username python-user{{item}} privilege 15 password 0 InsightInsight
+      loop: "{{users}}"
+
+    - name: Push ansible-users to routers
+      ios_config:
+        lines:
+          - username ansible-user privilege 15 password 0 InsightInsight
+          - username ansible-user{{item}} privilege 15 password 0 InsightInsight
+      loop: "{{users}}"
+
+    - name: Push Lab Config to routers
+      ios_config:
+        lines:
+          - ip http server
+          - ip http authentication local
+          - no ip domain-lookup
+          - ip domain-name chad.com
+          - line vty 0 98
+          - transport input all
+          - login local

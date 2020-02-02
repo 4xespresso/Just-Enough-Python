@@ -58,8 +58,8 @@
     - name: Copy file with owner and permissions
       copy:
         src: /home/chad/test
-        dest: /home/ansible-user{{ item }}
-        owner: ansible-user{{ item }}
-        group: ansible-user{{ item }}
+        dest: /home/ansible-user{{item}}
+        owner: ansible-user{{item}}
+        group: ansible-user{{item}}
         mode: '0644'
       loop: "{{users}}"
