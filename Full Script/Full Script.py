@@ -2,11 +2,12 @@ import telnetlib
 import paramiko
 import time
 import requests
+from requests.auth import HTTPBasicAuth
 from netmiko import Netmiko
 
 host_list= ["10.128.0.26", "10.128.0.27", "10.128.0.28"]
 username = "python-user"
-password = ''
+password = "InsightInsight"
 
 
 for individual_host in host_list:
@@ -59,9 +60,8 @@ for individual_host in host_list:
         print("Do nothing")
 
     try:
-        httpHeaders = {"Authorization": "Basic Y2hhZDpwQHNzd0ByZA=="}
         url_request = ("http://" + individual_host + "/level/15/exec/-/show/ip/interface/CR")
-        response = requests.get(url_request, headers=httpHeaders)
+        response = requests.get(url_request, auth=HTTPBasicAuth(username, password))
         print(response.content)
     except:
         print("Do nothing")
