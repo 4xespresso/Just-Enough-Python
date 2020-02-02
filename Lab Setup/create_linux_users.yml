@@ -72,3 +72,19 @@
         shell: /bin/bash
       become: true
       loop: "{{users}}"
+
+    - name: Create Main Python User
+      user:
+        name: python-user
+        state: present
+        password: $6$JExEWNQP$wESF.Rmmo1ZeDKfxZ9L.7dRDlvSGHE2UIPqWLht/WxOFueXsrokyfoukbtaH4mK3oOLwXw/NvD37h.CR39E/w/
+        shell: /bin/bash
+      become: true
+
+    - name: Create Main Ansible User
+      user:
+        name: ansible-user
+        state: present
+        password: $6$JExEWNQP$wESF.Rmmo1ZeDKfxZ9L.7dRDlvSGHE2UIPqWLht/WxOFueXsrokyfoukbtaH4mK3oOLwXw/NvD37h.CR39E/w/
+        shell: /bin/bash
+      become: true

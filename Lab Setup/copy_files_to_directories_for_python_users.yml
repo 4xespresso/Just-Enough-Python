@@ -57,7 +57,7 @@
   tasks:
     - name: Copy file with owner and permissions
       copy:
-        src: /home/chad/test
+        src: /home/python-user/Just-Enough-Python
         dest: /home/python-user{{ item }}
         owner: python-user{{ item }}
         group: python-user{{ item }}

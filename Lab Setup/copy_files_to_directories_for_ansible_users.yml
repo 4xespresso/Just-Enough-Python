@@ -57,7 +57,7 @@
   tasks:
     - name: Copy file with owner and permissions
       copy:
-        src: /home/chad/test
+        src: /home/ansible-user/ansible_engineering_summit_2020
         dest: /home/ansible-user{{item}}
         owner: ansible-user{{item}}
         group: ansible-user{{item}}
