@@ -1,0 +1,12 @@
+conf t
+hostname ciscorouter-
+ip domain-name chad.com
+crypto key generate rsa modulus 2048
+ip ssh version 2
+username chad privilege 15 password 0 InsightInsight
+line vty 0 98
+transport input all
+
+ciscorouter-1 10.128.0.26
+ciscorouter-2 10.128.0.27
+ciscorouter-3 10.128.0.28

@@ -1,0 +1,121 @@
+---
+- name: Configure Routers
+  connection: network_cli
+  hosts: all
+  gather_facts: false
+  vars:
+    ansible_network_os: ios
+    ansible_user: chad
+  tasks:
+    - name: Push Base Config to routers
+      ios_config:
+        lines:
+          - username python-user privilege 15 password 0 InsightInsight
+          - username ansible-user privilege 15 password 0 InsightInsight
+          - username ansible-user1 privilege 15 password 0 InsightInsight
+          - username ansible-user2 privilege 15 password 0 InsightInsight
+          - username ansible-user3 privilege 15 password 0 InsightInsight
+          - username ansible-user4 privilege 15 password 0 InsightInsight
+          - username ansible-user5 privilege 15 password 0 InsightInsight
+          - username ansible-user6 privilege 15 password 0 InsightInsight
+          - username ansible-user7 privilege 15 password 0 InsightInsight
+          - username ansible-user8 privilege 15 password 0 InsightInsight
+          - username ansible-user9 privilege 15 password 0 InsightInsight
+          - username ansible-user10 privilege 15 password 0 InsightInsight
+          - username ansible-user11 privilege 15 password 0 InsightInsight
+          - username ansible-user12 privilege 15 password 0 InsightInsight
+          - username ansible-user13 privilege 15 password 0 InsightInsight
+          - username ansible-user14 privilege 15 password 0 InsightInsight
+          - username ansible-user15 privilege 15 password 0 InsightInsight
+          - username ansible-user16 privilege 15 password 0 InsightInsight
+          - username ansible-user17 privilege 15 password 0 InsightInsight
+          - username ansible-user18 privilege 15 password 0 InsightInsight
+          - username ansible-user19 privilege 15 password 0 InsightInsight
+          - username ansible-user20 privilege 15 password 0 InsightInsight
+          - username ansible-user21 privilege 15 password 0 InsightInsight
+          - username ansible-user22 privilege 15 password 0 InsightInsight
+          - username ansible-user23 privilege 15 password 0 InsightInsight
+          - username ansible-user24 privilege 15 password 0 InsightInsight
+          - username ansible-user25 privilege 15 password 0 InsightInsight
+          - username ansible-user26 privilege 15 password 0 InsightInsight
+          - username ansible-user27 privilege 15 password 0 InsightInsight
+          - username ansible-user28 privilege 15 password 0 InsightInsight
+          - username ansible-user29 privilege 15 password 0 InsightInsight
+          - username ansible-user30 privilege 15 password 0 InsightInsight
+          - username ansible-user31 privilege 15 password 0 InsightInsight
+          - username ansible-user32 privilege 15 password 0 InsightInsight
+          - username ansible-user33 privilege 15 password 0 InsightInsight
+          - username ansible-user34 privilege 15 password 0 InsightInsight
+          - username ansible-user35 privilege 15 password 0 InsightInsight
+          - username ansible-user36 privilege 15 password 0 InsightInsight
+          - username ansible-user37 privilege 15 password 0 InsightInsight
+          - username ansible-user38 privilege 15 password 0 InsightInsight
+          - username ansible-user39 privilege 15 password 0 InsightInsight
+          - username ansible-user40 privilege 15 password 0 InsightInsight
+          - username ansible-user41 privilege 15 password 0 InsightInsight
+          - username ansible-user42 privilege 15 password 0 InsightInsight
+          - username ansible-user43 privilege 15 password 0 InsightInsight
+          - username ansible-user44 privilege 15 password 0 InsightInsight
+          - username ansible-user45 privilege 15 password 0 InsightInsight
+          - username ansible-user46 privilege 15 password 0 InsightInsight
+          - username ansible-user47 privilege 15 password 0 InsightInsight
+          - username ansible-user48 privilege 15 password 0 InsightInsight
+          - username ansible-user49 privilege 15 password 0 InsightInsight
+          - username ansible-user50 privilege 15 password 0 InsightInsight
+          - username python-user1 privilege 15 password 0 InsightInsight
+          - username python-user2 privilege 15 password 0 InsightInsight
+          - username python-user3 privilege 15 password 0 InsightInsight
+          - username python-user4 privilege 15 password 0 InsightInsight
+          - username python-user5 privilege 15 password 0 InsightInsight
+          - username python-user6 privilege 15 password 0 InsightInsight
+          - username python-user7 privilege 15 password 0 InsightInsight
+          - username python-user8 privilege 15 password 0 InsightInsight
+          - username python-user9 privilege 15 password 0 InsightInsight
+          - username python-user10 privilege 15 password 0 InsightInsight
+          - username python-user11 privilege 15 password 0 InsightInsight
+          - username python-user12 privilege 15 password 0 InsightInsight
+          - username python-user13 privilege 15 password 0 InsightInsight
+          - username python-user14 privilege 15 password 0 InsightInsight
+          - username python-user15 privilege 15 password 0 InsightInsight
+          - username python-user16 privilege 15 password 0 InsightInsight
+          - username python-user17 privilege 15 password 0 InsightInsight
+          - username python-user18 privilege 15 password 0 InsightInsight
+          - username python-user19 privilege 15 password 0 InsightInsight
+          - username python-user20 privilege 15 password 0 InsightInsight
+          - username python-user21 privilege 15 password 0 InsightInsight
+          - username python-user22 privilege 15 password 0 InsightInsight
+          - username python-user23 privilege 15 password 0 InsightInsight
+          - username python-user24 privilege 15 password 0 InsightInsight
+          - username python-user25 privilege 15 password 0 InsightInsight
+          - username python-user26 privilege 15 password 0 InsightInsight
+          - username python-user27 privilege 15 password 0 InsightInsight
+          - username python-user28 privilege 15 password 0 InsightInsight
+          - username python-user29 privilege 15 password 0 InsightInsight
+          - username python-user30 privilege 15 password 0 InsightInsight
+          - username python-user31 privilege 15 password 0 InsightInsight
+          - username python-user32 privilege 15 password 0 InsightInsight
+          - username python-user33 privilege 15 password 0 InsightInsight
+          - username python-user34 privilege 15 password 0 InsightInsight
+          - username python-user35 privilege 15 password 0 InsightInsight
+          - username python-user36 privilege 15 password 0 InsightInsight
+          - username python-user37 privilege 15 password 0 InsightInsight
+          - username python-user38 privilege 15 password 0 InsightInsight
+          - username python-user39 privilege 15 password 0 InsightInsight
+          - username python-user40 privilege 15 password 0 InsightInsight
+          - username python-user41 privilege 15 password 0 InsightInsight
+          - username python-user42 privilege 15 password 0 InsightInsight
+          - username python-user43 privilege 15 password 0 InsightInsight
+          - username python-user44 privilege 15 password 0 InsightInsight
+          - username python-user45 privilege 15 password 0 InsightInsight
+          - username python-user46 privilege 15 password 0 InsightInsight
+          - username python-user47 privilege 15 password 0 InsightInsight
+          - username python-user48 privilege 15 password 0 InsightInsight
+          - username python-user49 privilege 15 password 0 InsightInsight
+          - username python-user50 privilege 15 password 0 InsightInsight
+          - ip http server
+          - ip http authentication local
+          - no ip domain-lookup
+          - ip domain-name chad.com
+          - line vty 0 98
+          - transport input all
+          - login local
